@@ -1,0 +1,26 @@
+{
+  "name": "doc",
+  "version": "1.0.0",
+  "description": "apidoc",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dechocolate/apidoc.git"
+  },
+  "keywords": [
+    "apidoc"
+  ],
+  "author": "dechocolate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dechocolate/apidoc/issues"
+  },
+  "homepage": "https://github.com/dechocolate/apidoc#readme"
+}

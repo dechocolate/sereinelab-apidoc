@@ -1,0 +1,26 @@
+{
+  "name": "apidoc",
+  "version": "0.1.0",
+  "description": "smim 소개팅 앱 restful API",
+  "title": "smim 소개팅 앱 restful API",
+  "url" : "http://52.231.200.170:8080/api",
+  "sampleUrl": "http://52.231.200.170:8080/api",
+  "header": {
+    "title": "처음으로 이동",
+    "filename": "header.md"
+  },
+  "footer": {
+    "title": "마지막으로 이동",
+    "filename": "footer.md"
+  },
+  "template": {
+  	"withCompare": true,
+  	"withGenerator": true
+  },
+  "order": [
+    "Error",
+    "Define",
+    "PostTitleAndError",
+    "PostError"
+  ]
+}
