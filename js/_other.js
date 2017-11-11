@@ -1,5 +1,5 @@
  /**
- * @api {get} /others 타사용자 리스트
+ * @api {get} /others 타사용자 
  * @apiHeader (User) {String} authorization Authorization value.
  * @apiHeaderExample {json} Header-Example:
  *  {
