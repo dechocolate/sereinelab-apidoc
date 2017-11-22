@@ -1,8 +1,8 @@
 {
   "name": "apidoc",
   "version": "0.1.0",
-  "description": "76n1-user restful API",
-  "title": "76n1-user restful API",
+  "description": "76n1-app restful API",
+  "title": "76n1-app restful API",
   "url" : "http://52.187.191.13:3002/api",
   "sampleUrl": "http://52.187.191.13:3002/api",
   "header": {

@@ -4,7 +4,7 @@
  */
 
 /**
- * @api                 {post}           /users/:id/recommendation a.캡슐 추천 등록
+ * @api                 {post}           /users/:id/recommendations a.캡슐 추천 등록
  * @apiVersion          0.1.0
  * @apiName             recommendation regist
  * @apiGroup            Recommendation
@@ -44,7 +44,7 @@
 
 
 /**
- * @api                 {get}           /users/:id/recommendation b.캡슐 추천 조회
+ * @api                 {get}           /users/:id/recommendations b.캡슐 추천 조회
  * @apiVersion          0.1.0
  * @apiName             recommendation Select
  * @apiGroup            Recommendation
