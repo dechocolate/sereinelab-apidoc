@@ -7,5 +7,5 @@ app.get('/', function (req, res) {
 	res.render('apidoc/index.html');
 });
 
-app.listen(3000);
+app.listen(3003);
 console.log('api doc start !!');
