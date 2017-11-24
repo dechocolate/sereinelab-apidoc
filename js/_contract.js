@@ -48,3 +48,26 @@
  * @apiUse           adminError
  */
 
+/**
+ * @api                 {get}           /contract b.사용자 약정 선택
+ * @apiVersion          0.1.0
+ * @apiName             user contract check
+ * @apiGroup            Contract
+ *
+ * @apiDescription
+ * Create a new instance of the model and persist it into the data source
+ *
+ * @apiUse           adminError
+ */
+
+ /**
+ * @api                 {put}           /contract c.사용자 약정 취소/변경
+ * @apiVersion          0.1.0
+ * @apiName             user contract update
+ * @apiGroup            Contract
+ *
+ * @apiDescription
+ * Create a new instance of the model and persist it into the data source
+ *
+ * @apiUse           adminError
+ */

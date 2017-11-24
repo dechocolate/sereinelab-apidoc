@@ -32,6 +32,7 @@
  * @apiUse           adminError
  */
 
+
  /**
  * @api                 {post}           /users/login b.사용자 로그인
  * @apiVersion          0.1.0
@@ -218,3 +219,28 @@
     }
  * @apiUse           adminError
  */
+
+ /**
+ * @api                 {delete}           /users/delete g.사용자 탈퇴
+ * @apiVersion          0.1.0
+ * @apiName             user delete
+ * @apiGroup            User
+ *
+ * @apiDescription
+ * Create a new instance of the model and persist it into the data source
+ *
+ * @apiUse           adminError
+ */
+
+ /**
+ * @api                 {delete}           /users/delete h.사용자 프로필 사진 업로드
+ * @apiVersion          0.1.0
+ * @apiName             user profile image upload
+ * @apiGroup            User
+ *
+ * @apiDescription
+ * Create a new instance of the model and persist it into the data source
+ *
+ * @apiUse           adminError
+ */
+
