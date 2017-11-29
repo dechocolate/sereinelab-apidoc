@@ -4,7 +4,7 @@
  */
 
 /**
- * @api                 {post}           /users/:id/recommendation a.캡슐 추천 등록
+ * @api                 {post}           /users/:id/recommendations a.캡슐 추천 등록
  * @apiVersion          0.1.0
  * @apiName             recommendation regist
  * @apiGroup            Recommendation
@@ -17,11 +17,11 @@
  *  } 
  * 
  * @apiDescription
- * Find all instances of the model matched by filter from the data 
+ * Creates a new instance in recommendations of this model
  *
- * @apiParam             category                           아이템 카테고리(스킨=0 /로션=1 /오일=2)
- * @apiParam             isSelected                         구매 여부
- * @apiParam             userId                             사용자 아이디
+ * @apiParam             {Integer}      category                           아이템 카테고리(스킨=0 /로션=1 /오일=2)
+ * @apiParam             {Boolean}      isSelected                         구매 여부
+ * @apiParam             {ObjectId}     userId                             사용자 아이디
 
  * @apiSuccess         {String}     date                               추천일
  * @apiSuccess         {Integer}    category                           아이템 카테고리(스킨=0 /로션=1 /오일=2)
@@ -59,7 +59,7 @@
  * @apiDescription
  * Find all instances of the model matched by filter from the data 
  * 
- * @apiParam           id           userId
+ * @apiParam           {ObjectId}       id           userId
  *
  * @apiSuccess         {String}     date                               추천일
  * @apiSuccess         {Integer}    category                           아이템 카테고리(스킨=0 /로션=1 /오일=2)

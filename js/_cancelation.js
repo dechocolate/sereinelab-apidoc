@@ -21,7 +21,7 @@
  * Find all instances of the model matched by filter from the data 
  * 
  * 
- * @apiParam         id                              userId
+ * @apiParam         {ObjectId} id                              userId
  * 
  * 
  * @apiSuccess         {String}     date                               약정 취소일

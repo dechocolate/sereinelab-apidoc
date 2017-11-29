@@ -16,16 +16,20 @@
  * @apiParam            email                              이메일
  * @apiParam            name                               닉네임
  * @apiParam            password                           사용자 패스워드
- *
+ * @apiParam            available                          사용 여부
+
  * @apiSuccess         {String}     email                              이메일
  * @apiSuccess         {String}     name                               닉네임
  * @apiSuccess         {String}     created                            회원가입일 (생성일)
+ * @apiSuccess         {Boolean}    available                          사용 여부
+ * 
  * 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK
     {
         "created": "2017-11-18T11:14:59.515Z",
         "email": "test2@test2.com",
+        "available" : true,
         "id": 3,
         "name": "test"
     }
@@ -42,8 +46,8 @@
  * @apiDescription
  * Login a user with username/email and password
  *
- * @apiParam            email                              이메일
- * @apiParam            password                           사용자 패스워드
+ * @apiParam            {String}    email                              이메일
+ * @apiParam            {String}    password                           사용자 패스워드
  *
  * @apiSuccess         {String}     id                                access token
  * @apiSuccess         {String}     ttl                               닉네임
@@ -132,7 +136,7 @@
  * @apiDescription
  * Find a model instance by {{id}} from the data source
  *
- * @apiParam         id                             userId
+ * @apiParam         {ObjectId} id                             userId
  * 
  * 
  * @apiSuccess         {ObjectId}   id                             userId
@@ -179,19 +183,19 @@
  * @apiDescription
  * Find a model instance by {{id}} from the data source
  *
- * @apiParam         id                             userId
- * @apiParam         email                          이메일
- * @apiParam         class                          등급 (vip/ gold/ silver) / 보류
- * @apiParam         name                           닉네임
- * @apiParam         gender                         성별
- * @apiParam         birth                          생년월일
- * @apiParam         zipcode                        우편번호
- * @apiParam         address1                       주소
- * @apiParam         address2                       주소상세
- * @apiParam         phone                          휴대폰번호
- * @apiParam         emailVerified                  이메일인증여부 (Default : false)
- * @apiParam         available                      사용여부 ( Default : true)
- * @apiParam         created                        회원가입일 (생성일)
+ * @apiParam         {ObjectId}     id                             userId
+ * @apiParam         {String}       email                          이메일
+ * @apiParam         {String}       class                          등급 (vip/ gold/ silver) / 보류
+ * @apiParam         {String}       name                           닉네임
+ * @apiParam         {String}       gender                         성별
+ * @apiParam         {String}       birth                          생년월일
+ * @apiParam         {String}       zipcode                        우편번호
+ * @apiParam         {String}       address1                       주소
+ * @apiParam         {String}       address2                       주소상세
+ * @apiParam         {String}       phone                          휴대폰번호
+ * @apiParam         {Boolean}      emailVerified                  이메일인증여부 (Default : false)
+ * @apiParam         {Boolean}      available                      사용여부 ( Default : true)
+ * @apiParam         {String}       created                        회원가입일 (생성일)
  * 
  * 
  * @apiSuccess         {ObjectId}   id                             userId
@@ -221,26 +225,82 @@
  */
 
  /**
- * @api                 {delete}           /users/delete g.사용자 탈퇴
+ * @api                 {delete}           /users/{id}/leave g.사용자 탈퇴
  * @apiVersion          0.1.0
- * @apiName             user delete
+ * @apiName             user leave
  * @apiGroup            User
- *
+ * 
+ * @apiPermission       User
+ * @apiHeader           (User) {String} authorization Authorization value.
+ * @apiHeaderExample    {json}          Header-Example:
+ *  {
+ *    "Authorization": "accessTokenId"
+ *  } 
+ * 
+ * @apiParam         id                             userId
+ * 
  * @apiDescription
- * Create a new instance of the model and persist it into the data source
+ * user delete account
+ * 
+ * @apiSuccessExample
+ *  HTTP/1.1 200 OK
+ {
+  "status": 200
+ }
  *
  * @apiUse           adminError
  */
 
  /**
- * @api                 {delete}           /users/delete h.사용자 프로필 사진 업로드
+ * @api                 {post}           /users/:id/images h.사용자 프로필 사진 업로드 
  * @apiVersion          0.1.0
  * @apiName             user profile image upload
  * @apiGroup            User
- *
+ * 
+ * 
+ * @apiPermission       User
+ * @apiHeader           (User) {String} authorization Authorization value.
+ * @apiHeaderExample    {json}          Header-Example:
+ *  {
+ *    "Authorization": "accessTokenId"
+ *  } 
+ * 
  * @apiDescription
- * Create a new instance of the model and persist it into the data source
+ * Creates a new instance in images of this model.
+ * 
+ * 
+ * @apiParam        {String}        container           저장 폴더
+ * @apiParam        {String}        name                이미지 이름     
+ * @apiParam        {String}        alias               별칭
+ * @apiParam        {Integer}       size                이미지 크기
+ * @apiParam        {ObjectId}      userId              사용자 아이디
+ * @apiParam        {ObjectId}      capsuleId           캡슐 아이디
+ *   
+ * 
+ * @apiSuccess      {String}        container   저장 폴더
+ * @apiSuccess      {String}        created     등록일 (Default : now()) 
+ * @apiSuccess      {String}        name        이미지 이름
+ * @apiSuccess      {String}        alias       별칭
+ * @apiSuccess      {Integer}       size        이미지 크기
+ * @apiSuccess      {ObjectId}      userId      사용자 이름
+ * @apiSuccess      {ObjectId}      capsuleId   캡슐 아이디 
+ * @apiSuccess      {ObjectId}      id          등록한 이미지 아이디
+ *
+ * @apiSuccessExample
+ *  HTTP/1.1 200 OK
+ * {
+  "container": "string",
+  "created": "2017-11-27T10:26:55.045Z",
+  "name": "string",
+  "alias": "string",
+  "size": 0,
+  "userId": 0,
+  "imageId": 0,
+  "capsuleId": 0
+}
  *
  * @apiUse           adminError
  */
 
+
+ 

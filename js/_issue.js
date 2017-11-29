@@ -20,18 +20,15 @@
  * @apiDescription
  * Create a new instance of the model and persist it into the data source
  * 
- * @apiParam            id                           사용자 아이디
- * @apiParam            type                         구분 (일반=0 / 상품=1 / 주문=2 / 배송=3)
- * @apiParam            title                        제목
- * @apiParam            text                         문의내용
- * @apiParam            created                      등록일 (default: now())
- * @apiParam            deleted                      삭제일
+ * @apiParam            {ObjectId}  id                           사용자 아이디
+ * @apiParam            {Integer}   type                         구분 (일반=0 / 상품=1 / 주문=2 / 배송=3)
+ * @apiParam            {String}    title                        제목
+ * @apiParam            {String}    text                         문의내용
  *
  * @apiSuccess            {Integer}    type                         구분 (일반=0 / 상품=1 / 주문=2 / 배송=3)
  * @apiSuccess            {String}     title                        제목
  * @apiSuccess            {String}     text                         문의내용
  * @apiSuccess            {String}     created                      등록일  (default: now())
- * @apiSuccess            {String}     deleted                      삭제일
  * @apiSuccess            {String}     id                           문의 아이디
  * @apiSuccess            {String}     userId                       사용자 아이디
 
@@ -64,7 +61,7 @@
  * @apiDescription
  * Queries issues of user.
  *
- * @apiParam            id                              사용자 아이디
+ * @apiParam            {ObjectId}    id                              사용자 아이디
  *
  * @apiSuccess            {Integer}    type                         구분 (일반=0 / 상품=1 / 주문=2 / 배송=3)
  * @apiSuccess            {String}     title                        제목
@@ -116,13 +113,11 @@
  * @apiDescription
  * Update a related item by id for 
  *
- * @apiParam            id                           사용자 아이디
- * @apiParam            fk                           문의 아이디
- * @apiParam            type                         구분 (일반=0 / 상품=1 / 주문=2 / 배송=3)
- * @apiParam            title                        제목
- * @apiParam            text                         문의내용
- * @apiParam            created                      등록일 (default: now())
- * @apiParam            deleted                      삭제일
+ * @apiParam            {ObjectId}    id                           사용자 아이디
+ * @apiParam            {ObjectId}    fk                           문의 아이디
+ * @apiParam            {Integer}    type                         구분 (일반=0 / 상품=1 / 주문=2 / 배송=3)
+ * @apiParam            {String}    title                        제목
+ * @apiParam            {String}    text                         문의내용
  * 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK
@@ -156,8 +151,8 @@
  * @apiDescription
  * Find a model instance by {{id}} from the data source
  *
- * @apiParam         id               userId
- * @apiParam         fk               문의 아이디
+ * @apiParam         {ObjectId}   id               userId
+ * @apiParam         {ObjectId}   fk               문의 아이디
  * 
  * @apiUse           adminError
  */
@@ -179,7 +174,7 @@
  * @apiDescription
  * Find a model instance by {{id}} from the data source
  *
- * @apiParam         id                             userId
+ * @apiParam         {ObjectId} id                             userId
  * 
  * 
  * @apiSuccess         {ObjectId}   id                             userId
@@ -226,19 +221,19 @@
  * @apiDescription
  * Find a model instance by {{id}} from the data source
  *
- * @apiParam         id                             userId
- * @apiParam         email                          이메일
- * @apiParam         class                          등급 (vip/ gold/ silver) / 보류
- * @apiParam         name                           닉네임
- * @apiParam         gender                         성별
- * @apiParam         birth                          생년월일
- * @apiParam         zipcode                        우편번호
- * @apiParam         address1                       주소
- * @apiParam         address2                       주소상세
- * @apiParam         phone                          휴대폰번호
- * @apiParam         emailVerified                  이메일인증여부 (Default : false)
- * @apiParam         available                      사용여부 ( Default : true)
- * @apiParam         created                        회원가입일 (생성일)
+ * @apiParam         {ObjectId}   id                             userId
+ * @apiParam         {String}     email                          이메일
+ * @apiParam         {String}   class                          등급 (vip/ gold/ silver) / 보류
+ * @apiParam         {String}   name                           닉네임
+ * @apiParam         {String}   gender                         성별
+ * @apiParam         {String}   birth                          생년월일
+ * @apiParam         {String}   zipcode                        우편번호
+ * @apiParam         {String}   address1                       주소
+ * @apiParam         {String}   address2                       주소상세
+ * @apiParam         {String}   phone                          휴대폰번호
+ * @apiParam         {Boolean}  emailVerified                  이메일인증여부 (Default : false)
+ * @apiParam         {Boolean}  available                      사용여부 ( Default : true)
+ * @apiParam         {String}   created                        회원가입일 (생성일)
  * 
  * 
  * @apiSuccess         {ObjectId}   id                             userId
