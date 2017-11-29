@@ -21,7 +21,6 @@
  * @apiParam    {String}    event                             기록 내용
 
  * 
- * @apiSuccess    {String}      date                            기록 시간 (default: now())
  * @apiSuccess    {ObjectId}    userId                          사용자 아이디
  * @apiSuccess    {ObjectId}    id                              기록 아이디
  * @apiSuccess    {String}      event                           기록 내용
@@ -31,7 +30,11 @@
  *
  * 
  * @apiSuccessExample
- * {}
+{
+    "event": "event",
+    "id": "5a1ea0bc6b5c6439b3ed7b32",
+    "userId": "5a1e38fb4d90dd05b086affc"
+}
  * 
  *  @apiUse           adminError
 */
@@ -63,7 +66,18 @@
  *
  * 
  * @apiSuccessExample
- * {}
+ [
+    {
+        "event": "event1",
+        "id": "5a1ea0706b5c6439b3ed7b31",
+        "userId": "5a1e38fb4d90dd05b086affc"
+    },
+    {
+        "event": "event2",
+        "id": "5a1ea0bc6b5c6439b3ed7b32",
+        "userId": "5a1e38fb4d90dd05b086affc"
+    }
+]
  * 
  *  @apiUse           adminError
 */

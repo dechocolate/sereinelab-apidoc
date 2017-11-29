@@ -56,7 +56,7 @@
  * 
  * @apiParam         {ObjectId}   id                                 사용자 아이디
  * 
- * @apiSuccess         {ObjectId}   id                                 약정 
+ * @apiSuccess         {ObjectId}   id                                 약정  아이디
  * @apiSuccess         {ObjectId}   userId                             사용자 아이디
  * @apiSuccess         {ObjectId}   contractProductId                  약정 관리 아이디
  * @apiSuccess         {String}     start                              약정 시작일
@@ -71,15 +71,14 @@
  *  HTTP/1.1 200 OK
   [
     {
-        "start": "2017-11-20T10:58:35.642Z",
-        "end": "2017-11-20T10:58:35.642Z",
-        "total": 0,
-        "count": 0,
+        "start": "2017-11-29T12:11:19.692Z",
+        "end": "2017-12-29T12:11:19.692Z",
+        "total": 100,
+        "count": 10,
         "isActive": true,
-        "id": 0,
-        "contractProductId": 0,
-        "contractId": 0,
-        "userId": 0
+        "id": "5a1ea76d6b5c6439b3ed7b34",
+        "contractProductId": "5a1ea67731da970c3a31d267",
+        "userId": "5a1e38fb4d90dd05b086affc"
     }
 ]
  * @apiUse           adminError
@@ -121,6 +120,21 @@
  * @apiSuccess    {ObjectId}      contractProductId   약정상품 아이디
  * 
  * 
+ * @apiSuccessExample
+ *  HTTP/1.1 200 OK
+{
+    "start": "2017-11-29T12:11:19.692Z",
+    "end": "2017-11-29T12:11:19.692Z",
+    "total": 100,
+    "count": 10,
+    "isActive": true,
+    "id": "5a1ea8566b5c6439b3ed7b36",
+    "contractProductId": "5a1e38fb4d90dd05b086affc",
+    "userId": "5a1e38fb4d90dd05b086affc",
+    "detail": "detail"
+}
+
+
  * @apiUse           adminError
  */
 
@@ -163,5 +177,19 @@
  * @apiSuccess    {ObjectId}      contractProductId   약정상품 아이디
  * 
  * 
+ * @apiSuccessExample
+ *  HTTP/1.1 200 OK
+{
+    "start": "2017-11-29T12:11:19.692Z",
+    "end": "2017-11-29T12:11:19.692Z",
+    "total": 1,
+    "count": 100,
+    "isActive": true,
+    "id": "5a1ea8566b5c6439b3ed7b36",
+    "contractProductId": "5a1e38fb4d90dd05b086affc",
+    "userId": "5a1e38fb4d90dd05b086affc",
+    "detail": "d"
+}
+  
  * @apiUse           adminError
  */

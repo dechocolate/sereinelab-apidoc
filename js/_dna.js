@@ -29,7 +29,14 @@
  *
  * 
  * @apiSuccessExample
- * {}
+[
+    {
+        "progress": 0,
+        "hospital": "hospital",
+        "id": "5a1ea4a26b5c6439b3ed7b33",
+        "userId": "5a1e38fb4d90dd05b086affc"
+    }
+]
  * 
  *  @apiUse           adminError
 */

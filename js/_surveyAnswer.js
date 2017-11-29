@@ -81,7 +81,23 @@
  * 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK
-    []
+[
+    {
+        "created": "2017-11-29T12:43:02.523Z",
+        "id": "5a1eab566b5c6439b3ed7b37",
+        "surveyId": "5a1eaa6c31da970c3a31d269",
+        "userId": "5a1e38fb4d90dd05b086affc",
+        "surveyQuestionAnswers": [
+            {
+                "value": "value",
+                "id": "5a1eabb36b5c6439b3ed7b38",
+                "surveyAnswerId": "5a1eab566b5c6439b3ed7b37",
+                "surveyQuestionId": "",
+                "userId": "5a1e38fb4d90dd05b086affc"
+            }
+        ]
+    }
+]
  * @apiSuccessExample   {json}      Filter-example (상세조회 쿼리)
     {
         "include": {

@@ -20,8 +20,7 @@
  * Creates a new instance in recommendations of this model
  *
  * @apiParam             {Integer}      category                           아이템 카테고리(스킨=0 /로션=1 /오일=2)
- * @apiParam             {Boolean}      isSelected                         구매 여부
- * @apiParam             {ObjectId}     userId                             사용자 아이디
+ * @apiParam             {ObjectId}     id                             사용자 아이디
 
  * @apiSuccess         {String}     date                               추천일
  * @apiSuccess         {Integer}    category                           아이템 카테고리(스킨=0 /로션=1 /오일=2)
