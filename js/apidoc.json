@@ -1,26 +1,26 @@
 {
-  "name": "apidoc",
-  "version": "0.1.0",
-  "description": "76n1-user restful API",
-  "title": "76n1-user restful API",
-  "url" : "http://52.79.101.54:3000/api",
-  "sampleUrl": "http://52.79.101.54:3000/api",
-  "header": {
-    "title": "처음으로 이동",
-    "filename": "header.md"
-  },
-  "footer": {
-    "title": "마지막으로 이동",
-    "filename": "footer.md"
-  },
-  "template": {
-  	"withCompare": true,
-  	"withGenerator": true
-  },
-  "order": [
-    "Error",
-    "Define",
-    "PostTitleAndError",
-    "PostError"
-  ]
+	"name": "SEREINELAB",
+	"version": "0.1.0",
+	"description": "76n1-app-server restful API",
+	"title": "76n1-app-server",
+	"url": "http://52.79.101.54:3000/api",
+	"sampleUrl": "http://52.79.101.54:3000/api",
+	"header": {
+		"title": "처음으로 이동",
+		"filename": "header.md"
+	},
+	"footer": {
+		"title": "마지막으로 이동",
+		"filename": "footer.md"
+	},
+	"template": {
+		"withCompare": true,
+		"withGenerator": true
+	},
+	"order": [
+		"Error",
+		"Define",
+		"PostTitleAndError",
+		"PostError"
+	]
 }
