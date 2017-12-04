@@ -13,10 +13,9 @@
  * @apiDescription
  * Create a new instance of the model and persist it into the data source
  *
- * @apiParam            email                              이메일
- * @apiParam            name                               닉네임
- * @apiParam            password                           사용자 패스워드
- * @apiParam            available                          사용 여부
+ * @apiParam           {String} email                              이메일
+ * @apiParam           (String) name                               닉네임
+ * @apiParam           {String} password                           사용자 패스워드
 
  * @apiSuccess         {String}     email                              이메일
  * @apiSuccess         {String}     name                               닉네임
@@ -105,8 +104,8 @@
  * @apiDescription
  * Find a model instance by {{id}} from the data source
  *
- * @apiParam         id               userId
- * 
+ * @apiParam        {ObjectId}      id               userId
+ * @apiParam        {json}          filter           filter
  * 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK
@@ -136,8 +135,8 @@
  * @apiDescription
  * Find a model instance by {{id}} from the data source
  *
- * @apiParam         {ObjectId} id                             userId
- * 
+ * @apiParam            {ObjectId}      id                              userId
+ * @apiParam            {json}          filter                          filter
  * 
  * @apiSuccess         {ObjectId}   id                             userId
  * @apiSuccess         {String}     email                          이메일
@@ -150,7 +149,7 @@
  * @apiSuccess         {String}     address2                       주소상세
  * @apiSuccess         {String}     phone                          휴대폰번호
  * @apiSuccess         {Boolean}    emailVerified                  이메일인증여부 (Default : false)
- * @apiSuccess         {Boolean}    available                     사용여부 ( Default : true)
+ * @apiSuccess         {Boolean}    available                      사용여부 ( Default : true)
  * @apiSuccess         {String}     created                        회원가입일 (생성일)
 
  * 
@@ -237,7 +236,7 @@
  *    "Authorization": "accessTokenId"
  *  } 
  * 
- * @apiParam         id                             userId
+ * @apiParam         {ObjectId}     id                             userId
  * 
  * @apiDescription
  * user delete account

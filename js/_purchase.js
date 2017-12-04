@@ -37,8 +37,8 @@
  * @apiSuccess    {Integer}   progress                        주문상태 (준비=0/ 완료=1/ 취소=2)
  * @apiSuccess    {Boolean}   res                             결제상태 (성공=true / 실패=false)  
  * @apiSuccess    {ObjectId}  userId                          사용자 아이디
- * @apiSuccess    {String}    importKey                       3rd lib 결제키 
- * @apiSuccess    {String}    deliveryKey                     배송업체키 
+ * @apiSuccess    {ObjectId}    importKey                       3rd lib 결제키 
+ * @apiSuccess    {ObjectId}    deliveryKey                     배송업체키 
  * @apiSuccess    {ObjectId}  id                              구매 아이디
  * 
  * @apiDescription
@@ -80,6 +80,7 @@
  *  } 
  * 
  * @apiParam    {ObjectId}  id                              사용자 아이디
+ * @apiParam    {json}  filter                              filter
 
  * 
  * @apiSuccess    {String}    date                            구매일 (default : now())
@@ -91,8 +92,8 @@
  * @apiSuccess    {Integer}   progress                        주문상태 (준비=0/ 완료=1/ 취소=2)
  * @apiSuccess    {Boolean}   res                             결제상태 (성공=true / 실패=false)  
  * @apiSuccess    {ObjectId}  userId                          사용자 아이디
- * @apiSuccess    {String}    importKey                       3rd lib 결제키 
- * @apiSuccess    {String}    deliveryKey                     배송업체키 
+ * @apiSuccess    {ObjectId}    importKey                       3rd lib 결제키 
+ * @apiSuccess    {ObjectId}    deliveryKey                     배송업체키 
  * @apiSuccess    {ObjectId}  id                              구매 아이디
  * 
  * @apiDescription

@@ -19,7 +19,8 @@
  * 
  * @apiDescription
  * Find all instances of the model matched by filter from the data 
- *
+ * @apiParam    {json}  filter                              filter
+ * 
  * @apiSuccess         {ObjectId}   id                                 게시판 아이디
  * @apiSuccess         {Integer}    type                               게시판 종류(공지사항=0 / 도움말=1)
  * @apiSuccess         {String}     title                              제목
