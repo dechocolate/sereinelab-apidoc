@@ -31,7 +31,7 @@
 	"include": { 
 		"relation": "surveyQuestions", 			
 		"scope": {
-			"include": "surveyItems"
+			"include": "surveyQuestionItems"
 		} 
 	} 	
 }
