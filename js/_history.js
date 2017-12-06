@@ -24,7 +24,7 @@
  * @apiSuccess    {ObjectId}    userId                          사용자 아이디
  * @apiSuccess    {ObjectId}    id                              기록 아이디
  * @apiSuccess    {String}      event                           기록 내용
- * @apiSuccess    {String}      date                            기록 시간 (default: now())
+ * @apiSuccess    {Date}        date                            기록 시간 (default: now())
  * 
  * @apiDescription
  * Creates a new instance in histories of this model.
@@ -84,10 +84,9 @@
  * @apiParam    {ObjectId}  id                              사용자 아이디
  * @apiParam    {json}  filter                              filter
 
- * 
- * @apiSuccess    {Date}      	date                            기록 시간
  * @apiSuccess    {ObjectId}    userId                          사용자 아이디
  * @apiSuccess    {ObjectId}    id                              기록 아이디
+ * @apiSuccess    {Date}      	date                            기록 시간
  * @apiSuccess    {String}      event                           기록 내용
  * 
  * @apiDescription

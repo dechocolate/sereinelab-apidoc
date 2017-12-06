@@ -58,9 +58,9 @@
  * 
  * @apiSuccess         {ObjectId}   id                                 약정  아이디
  * @apiSuccess         {ObjectId}   userId                             사용자 아이디
- * @apiSuccess         {ObjectId}   contractProductId                  약정 관리 아이디
- * @apiSuccess         {String}     start                              약정 시작일
- * @apiSuccess         {String}     end                                약정 종료일
+ * @apiSuccess         {ObjectId}   contractProductId                  약정 상품 아이디
+ * @apiSuccess         {Date}       start                              약정 시작일
+ * @apiSuccess         {Date}       end                                약정 종료일
  * @apiSuccess         {Integer}    total                              총 횟수
  * @apiSuccess         {Integer}    count                              결제한 횟수
  * @apiSuccess         {String}     detail                             상품 상세정보
@@ -101,8 +101,8 @@
  * Creates a new instance in contracts of this model
  * 
  * @apiParam    {ObjectId}      id                  사용자 아이디
- * @apiParam    {String}        start               약정 시작일
- * @apiParam    {String}        end                 약정 종료일
+ * @apiParam    {Date}          start               약정 시작일
+ * @apiParam    {Date}          end                 약정 종료일
  * @apiParam    {Integer}       total               총 횟수
  * @apiParam    {Integer}       count               결제한 횟수
  * @apiParam    {String}        detail              상품 상세 정보
@@ -111,8 +111,8 @@
 
 
  * @apiSuccess    {ObjectId}      id                  사용자 아이디
- * @apiSuccess    {String}        start               약정 시작일
- * @apiSuccess    {String}        end                 약정 종료일
+ * @apiSuccess    {Date}          start               약정 시작일
+ * @apiSuccess    {Date}          end                 약정 종료일
  * @apiSuccess    {Integer}       total               총 횟수
  * @apiSuccess    {Integer}       count               결제한 횟수
  * @apiSuccess    {String}        detail              상품 상세 정보
@@ -157,8 +157,8 @@
  * 
  * @apiParam    {ObjectId}      id                  사용자 아이디
  * @apiParam    {ObjectId}      fk                  약정 아이디
- * @apiParam    {String}        start               약정 시작일
- * @apiParam    {String}        end                 약정 종료일
+ * @apiParam    {Date}          start               약정 시작일
+ * @apiParam    {Date}          end                 약정 종료일
  * @apiParam    {Integer}       total               총 횟수
  * @apiParam    {Integer}       count               결제한 횟수
  * @apiParam    {String}        detail              상품 상세 정보
@@ -168,8 +168,8 @@
 
  * @apiSuccess    {ObjectId}      id                  약정 아이디
  * @apiSuccess    {ObjectId}      userId              사용자 아이디
- * @apiSuccess    {String}        start               약정 시작일
- * @apiSuccess    {String}        end                 약정 종료일
+ * @apiSuccess    {Date}          start               약정 시작일
+ * @apiSuccess    {Date}          end                 약정 종료일
  * @apiSuccess    {Integer}       total               총 횟수
  * @apiSuccess    {Integer}       count               결제한 횟수
  * @apiSuccess    {String}        detail              상품 상세 정보

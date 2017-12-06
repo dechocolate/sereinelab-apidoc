@@ -24,11 +24,11 @@
  * @apiParam            {ObjectId}  id                                  위약금 아이디
  * @apiParam            {json}      filter                              filter
  * 
- * @apiSuccess         {String}     date                               약정 취소일
+ * @apiSuccess         {Date}       date                               약정 취소일
  * @apiSuccess         {Boolean}    progress                           처리 사항(완료=true / 미완료=false)
  * @apiSuccess         {Integer}    charge                             위약금액
  * @apiSuccess         {String}     memo                               세부 내용
- * @apiSuccess         {ObjectId}    cancelationId                     사용자 아이디
+ * @apiSuccess         {ObjectId}    cancelationId                     위약 내역 아이디
 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK
