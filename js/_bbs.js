@@ -27,7 +27,7 @@
  * @apiSuccess         {String}     text                               내용
  * @apiSuccess         {boolean}    display                            표시여부
  * @apiSuccess         {Integer}    count                              조회 수
- * @apiSuccess         {String}     created                            등록일
+ * @apiSuccess         {Date}       created                            등록일
 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK

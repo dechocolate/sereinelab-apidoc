@@ -19,7 +19,7 @@
 
  * @apiSuccess         {String}     email                              이메일
  * @apiSuccess         {String}     name                               닉네임
- * @apiSuccess         {String}     created                            회원가입일 (생성일)
+ * @apiSuccess         {Date}       created                            회원가입일 (생성일)
  * @apiSuccess         {Boolean}    available                          사용 여부
  * 
  * 
@@ -50,7 +50,7 @@
  *
  * @apiSuccess         {String}     id                                access token
  * @apiSuccess         {String}     ttl                               닉네임
- * @apiSuccess         {String}     created                           회원가입일 (Default : now())
+ * @apiSuccess         {Date}       created                           회원가입일 (Default : now())
  * @apiSuccess         {ObjectId}   userId                            사용자 아이디
  * 
  * @apiSuccessExample
@@ -87,39 +87,8 @@
  */
 
 
-/**
- * @api                 {get}           /users/:id d.사용자 프로필 조회
- * @apiVersion          0.1.0
- * @apiName             user profile select
- * @apiGroup            User
- * 
- * @apiPermission       User
- * @apiHeader           (User) {String} authorization Authorization value.
- * @apiHeaderExample    {json}          Header-Example:
- *  {
- *    "Authorization": "accessTokenId"
- *  } 
- * 
- * 
- * @apiDescription
- * Find a model instance by {{id}} from the data source
- *
- * @apiParam        {ObjectId}      id               userId
- * @apiParam        {json}          filter           filter
- * 
- * @apiSuccessExample
- *  HTTP/1.1 200 OK
-    {
-        "created": "2017-11-18T11:14:59.515Z",
-        "email": "test2@test2.com",
-        "id": 3,
-        "name": "test"
-    }
- * @apiUse           adminError
- */
-
  /**
- * @api                 {put}           /users/:id e.사용자 프로필 조회
+ * @api                 {put}           /users/:id d.사용자 프로필 조회
  * @apiVersion          0.1.0
  * @apiName             user profile select
  * @apiGroup            User
@@ -135,10 +104,10 @@
  * @apiDescription
  * Find a model instance by {{id}} from the data source
  *
- * @apiParam            {ObjectId}      id                              userId
+ * @apiParam            {ObjectId}      id                              사용자 아이디
  * @apiParam            {json}          filter                          filter
  * 
- * @apiSuccess         {ObjectId}   id                             userId
+ * @apiSuccess         {ObjectId}   id                             사용자 아이디
  * @apiSuccess         {String}     email                          이메일
  * @apiSuccess         {String}     class                          등급 (vip/ gold/ silver) / 보류
  * @apiSuccess         {String}     name                           닉네임
@@ -150,7 +119,7 @@
  * @apiSuccess         {String}     phone                          휴대폰번호
  * @apiSuccess         {Boolean}    emailVerified                  이메일인증여부 (Default : false)
  * @apiSuccess         {Boolean}    available                      사용여부 ( Default : true)
- * @apiSuccess         {String}     created                        회원가입일 (생성일)
+ * @apiSuccess         {Date}       created                        회원가입일 (생성일)
 
  * 
  * @apiSuccessExample
@@ -166,7 +135,7 @@
 
 
   /**
- * @api                 {put}           /users/:id f.사용자 프로필 수정
+ * @api                 {put}           /users/:id e.사용자 프로필 수정
  * @apiVersion          0.1.0
  * @apiName             user profile update
  * @apiGroup            User
@@ -194,7 +163,7 @@
  * @apiParam         {String}       phone                          휴대폰번호
  * @apiParam         {Boolean}      emailVerified                  이메일인증여부 (Default : false)
  * @apiParam         {Boolean}      available                      사용여부 ( Default : true)
- * @apiParam         {String}       created                        회원가입일 (생성일)
+ * @apiParam         {Date}         created                        회원가입일 (생성일)
  * 
  * 
  * @apiSuccess         {ObjectId}   id                             userId
@@ -209,7 +178,7 @@
  * @apiSuccess         {String}     phone                          휴대폰번호
  * @apiSuccess         {Boolean}    emailVerified                  이메일인증여부 (Default : false)
  * @apiSuccess         {Boolean}    available                     사용여부 ( Default : true)
- * @apiSuccess         {String}     created                        회원가입일 (생성일)
+ * @apiSuccess         {Date}       created                        회원가입일 (생성일)
 
  * 
  * @apiSuccessExample
@@ -224,7 +193,7 @@
  */
 
  /**
- * @api                 {delete}           /users/{id}/leave g.사용자 탈퇴
+ * @api                 {delete}           /users/{id}/leave f.사용자 탈퇴
  * @apiVersion          0.1.0
  * @apiName             user leave
  * @apiGroup            User
@@ -251,7 +220,7 @@
  */
 
  /**
- * @api                 {post}           /users/:id/images h.사용자 프로필 사진 업로드 
+ * @api                 {post}           /users/:id/images g.사용자 프로필 사진 업로드 
  * @apiVersion          0.1.0
  * @apiName             user profile image upload
  * @apiGroup            User
@@ -277,7 +246,7 @@
  *   
  * 
  * @apiSuccess      {String}        container   저장 폴더
- * @apiSuccess      {String}        created     등록일 (Default : now()) 
+ * @apiSuccess      {Date}          created     등록일 (Default : now()) 
  * @apiSuccess      {String}        name        이미지 이름
  * @apiSuccess      {String}        alias       별칭
  * @apiSuccess      {Integer}       size        이미지 크기

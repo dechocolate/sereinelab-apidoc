@@ -20,13 +20,13 @@
  * @apiParam    {json}  filter                              filter
  * 
  * @apiSuccess    {ObjectId}    id                              dna 아이디
- * @apiSuccess    {String}      date                            dna 등록 시간 (default: now())
+ * @apiSuccess    {Date}        date                            dna 등록 시간 (default: now())
  * @apiSuccess    {Integer}     progress                        진행사항(미발송=0 / 발송하기=1 / 발송중=2)
  * @apiSuccess    {String}      hospital                        검사기관
  * @apiSuccess    {ObjectId}    userId                          사용자 아이디
  * 
  * @apiDescription
- * Queries histories of user.
+ * Queries dna of user.
  *
  * 
  * @apiSuccessExample

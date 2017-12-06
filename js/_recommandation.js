@@ -22,7 +22,7 @@
  * @apiParam             {Integer}      category                           아이템 카테고리(스킨=0 /로션=1 /오일=2)
  * @apiParam             {ObjectId}     id                             사용자 아이디
 
- * @apiSuccess         {String}     date                               추천일
+ * @apiSuccess         {Date}       date                               추천일
  * @apiSuccess         {Integer}    category                           아이템 카테고리(스킨=0 /로션=1 /오일=2)
  * @apiSuccess         {Boolean}    isSelected                         구매 여부
  * @apiSuccess         {ObjectId}   Id                                 캡슐 추천 아이디
@@ -61,7 +61,7 @@
  * @apiParam           {ObjectId}   id           userId
  * @apiParam           {json}       filter       filter
  * 
- * @apiSuccess         {String}     date                               추천일
+ * @apiSuccess         {Date}       date                               추천일
  * @apiSuccess         {Integer}    category                           아이템 카테고리(스킨=0 /로션=1 /오일=2)
  * @apiSuccess         {Boolean}    isSelected                         구매 여부
  * @apiSuccess         {ObjectId}   userId                             사용자 아이디
