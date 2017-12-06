@@ -82,6 +82,7 @@
  *  } 
  * 
  * @apiParam    {ObjectId}  id                              사용자 아이디
+ * @apiParam    {json}  filter                              filter
 
  * 
  * @apiSuccess    {Date}      	date                            기록 시간

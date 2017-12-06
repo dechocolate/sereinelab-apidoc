@@ -58,8 +58,9 @@
  * @apiDescription
  * Find all instances of the model matched by filter from the data 
  * 
- * @apiParam           {ObjectId}       id           userId
- *
+ * @apiParam           {ObjectId}   id           userId
+ * @apiParam           {json}       filter       filter
+ * 
  * @apiSuccess         {String}     date                               추천일
  * @apiSuccess         {Integer}    category                           아이템 카테고리(스킨=0 /로션=1 /오일=2)
  * @apiSuccess         {Boolean}    isSelected                         구매 여부

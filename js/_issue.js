@@ -29,8 +29,8 @@
  * @apiSuccess            {String}     title                        제목
  * @apiSuccess            {String}     text                         문의내용
  * @apiSuccess            {String}     created                      등록일  (default: now())
- * @apiSuccess            {String}     id                           문의 아이디
- * @apiSuccess            {String}     userId                       사용자 아이디
+ * @apiSuccess            {ObjectId}     id                           문의 아이디
+ * @apiSuccess            {ObjectId}     userId                       사용자 아이디
 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK
@@ -68,8 +68,8 @@
  * @apiSuccess            {String}     text                         문의내용
  * @apiSuccess            {String}     created                      등록일  (default: now())
  * @apiSuccess            {String}     deleted                      삭제일
- * @apiSuccess            {String}     id                           문의 아이디
- * @apiSuccess            {String}     userId                       사용자 아이디
+ * @apiSuccess            {ObjectId}     id                           문의 아이디
+ * @apiSuccess            {ObjectId}     userId                       사용자 아이디
  * 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK

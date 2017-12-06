@@ -41,7 +41,7 @@
 /**
  * @api                 {get}           /users/:id/contracts b.사용자 약정내역 조회
  * @apiVersion          0.1.0
- * @apiName             contract Select
+ * @apiName             contract select
  * @apiGroup            Contract
  * 
  * @apiPermission       User

@@ -5,7 +5,7 @@
 
 
 /**
- * @api                 {get}           /users/:id/cancelations a.위약금 내역 조회
+ * @api                 {get}           /cancelations/:id a.위약금 내역 조회
  * @apiVersion          0.1.0
  * @apiName             cancelation Select
  * @apiGroup            Cancelation
@@ -21,8 +21,8 @@
  * Find all instances of the model matched by filter from the data 
  * 
  * 
- * @apiParam         {ObjectId} id                              userId
- * 
+ * @apiParam            {ObjectId}  id                                  위약금 아이디
+ * @apiParam            {json}      filter                              filter
  * 
  * @apiSuccess         {String}     date                               약정 취소일
  * @apiSuccess         {Boolean}    progress                           처리 사항(완료=true / 미완료=false)
