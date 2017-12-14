@@ -4,46 +4,44 @@
  */
 
 
+
 /**
  * @api                 {post}           /users a.사용자 가입
  * @apiVersion          0.1.0
  * @apiName             user sign in
- * @apiGroup            User
+ * @apiGroup            User 
  *
- * @apiDescription
- * Create a new instance of the model and persist it into the data source
- *
- * @apiParam           {String} email                              이메일
- * @apiParam           (String) name                               닉네임
- * @apiParam           {String} password                           사용자 패스워드
+ * @apiParam           {Number}  	provider                           가입경로 (이메일=0 / 페이스북=1)
+ * @apiParam           {String} 	email                              이메일
+ * @apiParam           {String} 	name                               닉네임
+ * @apiParam           {String} 	password                           사용자 패스워드
 
  * @apiSuccess         {String}     email                              이메일
  * @apiSuccess         {String}     name                               닉네임
  * @apiSuccess         {Date}       created                            회원가입일 (생성일)
  * @apiSuccess         {Boolean}    available                          사용 여부
  * 
- * 
  * @apiSuccessExample
- *  HTTP/1.1 200 OK
-    {
-        "created": "2017-11-18T11:14:59.515Z",
-        "email": "test2@test2.com",
-        "available" : true,
-        "id": 3,
-        "name": "test"
-    }
- * @apiUse           adminError
+ * HTTP/1.1 200 OK
+	{
+	 	"provider": 0,
+		"created": "2017-11-18T11:14:59.515Z",
+		"email": "test2@test2.com",
+		"available" : true,
+		"id": 3,
+		"name": "test"
+	}
+ *
  */
+
+
 
 
  /**
  * @api                 {post}           /users/login b.사용자 로그인
  * @apiVersion          0.1.0
  * @apiName             user login
- * @apiGroup            User
- *
- * @apiDescription
- * Login a user with username/email and password
+ * @apiGroup            User 
  *
  * @apiParam            {String}    email                              이메일
  * @apiParam            {String}    password                           사용자 패스워드
@@ -76,8 +74,7 @@
  * @apiHeaderExample    {json}          Header-Example:
  *  {
  *    "Authorization": "accessTokenId"
- *  } 
- * 
+ *  }
  * 
  * @apiDescription
  * Logout a user with access token

@@ -31,7 +31,7 @@
 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK
- [
+[
     {
         "type": "string",
         "title": "string",

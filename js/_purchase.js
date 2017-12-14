@@ -1,21 +1,10 @@
 /**
- * @apiDefine adminError
- * @apiError 401Error  AUTHORIZATION_REQUIRED
- */
-
-
-/**
  * @api                 {post}           /users/:id/purchases a.상품 구매
  * @apiVersion          0.1.0
  * @apiName             product purchase 
  * @apiGroup            Purchase
  *
- * @apiPermission       User
- * @apiHeader           (User) {String} authorization Authorization value.
- * @apiHeaderExample    {json}          Header-Example:
- *  {
- *    "Authorization": "accessTokenId"
- *  } 
+ * @apiPermission       User 
  * 
  * @apiParam    {ObjectId}  id                              사용자 아이디
  * @apiParam    {String}    summary                         구매품 요약
@@ -23,10 +12,6 @@
  * @apiParam    {Integer}   discount                        총 할인금액
  * @apiParam    {Integer}   price                           총 구매금액
  * @apiParam    {String}    address                         배송주소
- * @apiParam    {Integer}   progress                        주문상태 (준비=0/ 완료=1/ 취소=2)
- * @apiParam    {Boolean}   res                             결제상태 (성공=true / 실패=false)  
- * @apiParam    {String}    importKey                       3rd lib 결제키 
- * @apiParam    {String}    deliveryKey                     배송업체키
  * 
  * @apiSuccess    {String}    date                            구매일 (default : now())
  * @apiSuccess    {String}    summary                         구매품 요약
@@ -40,13 +25,10 @@
  * @apiSuccess    {String}    importKey                       3rd lib 결제키 
  * @apiSuccess    {String}    deliveryKey                     배송업체키 
  * @apiSuccess    {ObjectId}  id                              구매 아이디
- * 
- * @apiDescription
- * Creates a new instance in purchases of this model.
  *
  * 
  * @apiSuccessExample
-
+ * HTTP/1.1 200 OK
     {
         "summary": "summary",
         "supply": 1,
@@ -60,10 +42,67 @@
         "importKey": "",
         "deliveryKey": ""
     }
-
+ * @apiSuccessExample   {json}      상품구매 json 예제
+    {  
+	"date":"2017-12-14T04:23:34.188Z",
+	"supply":1000,
+	"discount":10,
+	"price":10,
+	"address":"서울시 도봉구 쌍문동",
+	"progress":0,
+	"id":2,
+	"userId":2,
+	"purchaseItems":[  
+		{  
+			"type":1,
+			"name":"76N1 화장품 메이커",
+			"price":100,
+			"id":2,
+			"purchaseId":2
+		},
+		{  
+			"type":0,
+			"name":"VIP 6개월",
+			"price":100,
+			"detail":[  
+				{  
+				"name":"스킨",
+				"capsules":[  
+						"로즈워터",
+						"감초추출물",
+						"홍삼추출물"
+					]
+					},
+					{  
+					"name":"로션",
+					"capsules":[  
+						"로즈워터",
+						"감초추출물",
+						"홍삼추출물"
+					]
+					},
+					{  
+					"name":"페이스오일",
+					"capsules":[  
+						"로즈워터",
+						"감초추출물",
+						"홍삼추출물"
+					]
+					}
+				],
+				"id":3,
+				"purchaseId":2
+			}
+		]
+	}
  * 
  *  @apiUse           adminError
 */
+
+
+
+
+
 
 
 /**
@@ -72,16 +111,10 @@
  * @apiName             product purchase select
  * @apiGroup            Purchase
  *
- * @apiPermission       User
- * @apiHeader           (User) {String} authorization Authorization value.
- * @apiHeaderExample    {json}          Header-Example:
- *  {
- *    "Authorization": "accessTokenId"
- *  } 
+ * @apiPermission       User 
  * 
  * @apiParam    {ObjectId}  id                              사용자 아이디
  * @apiParam    {Json}  filter                              filter
-
  * 
  * @apiSuccess    {Date}    date                            구매일 (default : now())
  * @apiSuccess    {String}    summary                         구매품 요약
@@ -96,30 +129,27 @@
  * @apiSuccess    {String}    deliveryKey                     배송업체키 
  * @apiSuccess    {ObjectId}  id                              구매 아이디
  * 
- * @apiDescription
- * Queries purchases of user
- *
- * 
  * @apiSuccessExample
-[
-    {
-        "id": 1,
-        "userId": 1
-    },
-    {
-        "summary": "summary",
-        "supply": 1,
-        "discount": 1,
-        "price": 1,
-        "address": "address",
-        "progress": "1",
-        "res": "",
-        "id": 2,
-        "userId": 1,
-        "importKey": "",
-        "deliveryKey": ""
-    }
-]
+ * HTTP/1.1 200 OK
+	[
+		{
+			"id": 1,
+			"userId": 1
+		},
+		{
+			"summary": "summary",
+			"supply": 1,
+			"discount": 1,
+			"price": 1,
+			"address": "address",
+			"progress": "1",
+			"res": "",
+			"id": 2,
+			"userId": 1,
+			"importKey": "",
+			"deliveryKey": ""
+		}
+	]
  * 
  *  @apiUse           adminError
 */
