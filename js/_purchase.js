@@ -43,58 +43,50 @@
         "deliveryKey": ""
     }
  * @apiSuccessExample   {json}      상품구매 json 예제
-    {  
-	"date":"2017-12-14T04:23:34.188Z",
-	"supply":1000,
-	"discount":10,
-	"price":10,
-	"address":"서울시 도봉구 쌍문동",
-	"progress":0,
-	"id":2,
-	"userId":2,
-	"purchaseItems":[  
-		{  
-			"type":1,
-			"name":"76N1 화장품 메이커",
-			"price":100,
-			"id":2,
-			"purchaseId":2
-		},
-		{  
-			"type":0,
-			"name":"VIP 6개월",
-			"price":100,
-			"detail":[  
-				{  
-				"name":"스킨",
-				"capsules":[  
-						"로즈워터",
-						"감초추출물",
-						"홍삼추출물"
-					]
-					},
-					{  
-					"name":"로션",
-					"capsules":[  
-						"로즈워터",
-						"감초추출물",
-						"홍삼추출물"
-					]
-					},
-					{  
-					"name":"페이스오일",
-					"capsules":[  
-						"로즈워터",
-						"감초추출물",
-						"홍삼추출물"
-					]
-					}
-				],
-				"id":3,
-				"purchaseId":2
-			}
-		]
-	}
+{    
+    "price": 3000,
+    "discount": 1000,
+    "total": 2000,
+    "address": "서울시 도봉구 쌍문동",    
+	"contractProductId": 1,
+    "itemList": [
+        {			
+			"id" : 1,
+            "type": 1,
+            "name": "76N1 화장품 메이커",
+            "price": 1000         
+        },
+		{
+			"id" : 2,
+            "type": 0,
+            "name": "VIP 6개월",
+            "price": 2000,
+            "detail": [
+                {
+                    "name": "스킨",
+                    "capsules": [
+						{"name": "로즈워터"},                        
+						{"name": "감초추출물"}                        
+                    ]
+                },
+                {
+                    "name": "로션",
+                    "capsules": [
+                        {"name": "로즈워터"},                        
+						{"name": "감초추출물"}
+                    ]
+                },
+                {
+                    "name": "페이스오일",
+                    "capsules": [
+                        {"name": "로즈워터"},                        
+						{"name": "감초추출물"}
+                    ]
+                }
+            ]
+        }
+	]
+}
  * 
  *  @apiUse           adminError
 */
