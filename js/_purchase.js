@@ -6,12 +6,12 @@
  *
  * @apiPermission       User 
  * 
- * @apiParam    {ObjectId}  id                              사용자 아이디
- * @apiParam    {String}    summary                         구매품 요약
- * @apiParam    {Integer}   supply                          총 공급금액
- * @apiParam    {Integer}   discount                        총 할인금액
- * @apiParam    {Integer}   price                           총 구매금액
+ * @apiHeader           (User) {String} authorization Authorization value.
+ * 
+ * @apiParam    {ObjectId}  id                              사용자 아이디 
  * @apiParam    {String}    address                         배송주소
+ * @apiParam    {String}    contractProductId               계약상품 아이디
+ * @apiParam    {Json}      itemList                        구매리스트 / type 0은 약정상품 (detail 상세 캡슐 입력), 1은 기기
  * 
  * @apiSuccess    {String}    date                            구매일 (default : now())
  * @apiSuccess    {String}    summary                         구매품 요약
@@ -42,14 +42,17 @@
         "importKey": "",
         "deliveryKey": ""
     }
- * @apiSuccessExample   {json}      상품구매 json 예제
+* @apiSuccessExample   {json}      상품구매 json 예제
 {    
     "price": 3000,
     "discount": 1000,
     "total": 2000,
     "address": "서울시 도봉구 쌍문동",    
 	"contractProductId": 1,
-    "itemList": [
+    "itemList": []
+}
+* @apiSuccessExample   {json}      itemList array 예제	
+	[
         {			
 			"id" : 1,
             "type": 1,
@@ -83,10 +86,9 @@
 						{"name": "감초추출물"}
                     ]
                 }
-            ]
-        }
-	]
-}
+			]
+		}
+	]     
  * 
  *  @apiUse           adminError
 */
