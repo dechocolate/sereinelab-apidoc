@@ -55,15 +55,11 @@
 	[
         {			
 			"id" : 1,
-            "type": 1,
-            "name": "76N1 화장품 메이커",
-            "price": 1000         
+            "type": 1,                
         },
 		{
 			"id" : 2,
-            "type": 0,
-            "name": "VIP 6개월",
-            "price": 2000,
+            "type": 0,            
             "detail": [
                 {
                     "name": "스킨",
