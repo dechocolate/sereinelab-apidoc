@@ -9,9 +9,8 @@
  * @apiHeader           (User) {String} authorization Authorization value.
  * 
  * @apiParam    {ObjectId}  id                              사용자 아이디 
- * @apiParam    {String}    address                         배송주소
- * @apiParam    {String}    contractProductId               계약상품 아이디
- * @apiParam    {Json}      itemList                        구매리스트 / type 0은 약정상품 (detail 상세 캡슐 입력), 1은 기기
+ * @apiParam    {String}    address                         배송주소 
+ * @apiParam    {Object}      itemList                      구매리스트 / type 0은 약정상품 (detail 상세 캡슐 입력), 1은 기기
  * 
  * @apiSuccess    {String}    date                            구매일 (default : now())
  * @apiSuccess    {String}    summary                         구매품 요약
@@ -54,31 +53,29 @@
 * @apiSuccessExample   {json}      itemList array 예제	
 	[
         {			
-			"id" : 1,
-            "type": 1,                
+			"deviceId" : 3
         },
-		{
-			"id" : 2,
-            "type": 0,            
+		{			
+            "contractProductId": 1,
             "detail": [
                 {
                     "name": "스킨",
                     "capsules": [
-						{"name": "로즈워터"},                        
-						{"name": "감초추출물"}                        
+						{"name": "로즈워터"},
+						{"name": "감초추출물"}
                     ]
                 },
                 {
-                    "name": "로션",
-                    "capsules": [
-                        {"name": "로즈워터"},                        
+					"name": "로션",
+					"capsules": [
+                        {"name": "로즈워터"},
 						{"name": "감초추출물"}
                     ]
                 },
                 {
                     "name": "페이스오일",
                     "capsules": [
-                        {"name": "로즈워터"},                        
+                        {"name": "로즈워터"},
 						{"name": "감초추출물"}
                     ]
                 }

@@ -85,7 +85,7 @@
 
 
  /**
- * @api                 {put}           /users/:id d.사용자 프로필 조회
+ * @api                 {get}           /users/:id d.사용자 프로필 조회
  * @apiVersion          0.1.0
  * @apiName             user profile select
  * @apiGroup            User
