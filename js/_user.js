@@ -132,7 +132,7 @@
 
 
   /**
- * @api                 {put}           /users/:id e.사용자 프로필 수정
+ * @api                 {patch}           /users/:id e.사용자 프로필 수정
  * @apiVersion          0.1.0
  * @apiName             user profile update
  * @apiGroup            User
@@ -148,19 +148,14 @@
  * @apiDescription
  * Find a model instance by {{id}} from the data source
  *
- * @apiParam         {ObjectId}     id                             userId
- * @apiParam         {String}       email                          이메일
- * @apiParam         {String}       class                          등급 (vip/ gold/ silver) / 보류
+ * @apiParam         {ObjectId}     id                             userId 
  * @apiParam         {String}       name                           닉네임
  * @apiParam         {String}       gender                         성별
  * @apiParam         {String}       birth                          생년월일
  * @apiParam         {String}       zipcode                        우편번호
  * @apiParam         {String}       address1                       주소
  * @apiParam         {String}       address2                       주소상세
- * @apiParam         {String}       phone                          휴대폰번호
- * @apiParam         {Boolean}      emailVerified                  이메일인증여부 (Default : false)
- * @apiParam         {Boolean}      available                      사용여부 ( Default : true)
- * @apiParam         {Date}         created                        회원가입일 (생성일)
+ * @apiParam         {String}       phone                          휴대폰번호 
  * 
  * 
  * @apiSuccess         {ObjectId}   id                             userId
