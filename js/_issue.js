@@ -17,8 +17,6 @@
  *    "Authorization": "accessTokenId"
  *  } 
  * 
- * @apiDescription
- * Create a new instance of the model and persist it into the data source
  * 
  * @apiParam            {ObjectId}  id                           사용자 아이디
  * @apiParam            {Integer}   type                         구분 (일반=0 / 상품=1 / 주문=2 / 배송=3)
@@ -58,8 +56,6 @@
  *    "Authorization": "accessTokenId"
  *  } 
  * 
- * @apiDescription
- * Queries issues of user.
  *
  * @apiParam            {ObjectId}    id                              사용자 아이디
  * @apiParam            {Json}        filter                        filter
@@ -112,9 +108,6 @@
  *  } 
  * 
  * 
- * @apiDescription
- * Update a related item by id for 
- *
  * @apiParam            {ObjectId}    id                           사용자 아이디
  * @apiParam            {ObjectId}    fk                           문의 아이디
  * @apiParam            {Integer}    type                         구분 (일반=0 / 상품=1 / 주문=2 / 배송=3)
@@ -137,7 +130,7 @@
 
 
 /**
- * @api                 {delete}          /users/:id/issues/:fk d.고객문의 삭제
+ * @api                 {put}          /users/:id/issues/:fk d.고객문의 삭제
  * @apiVersion          0.1.0
  * @apiName             issue delete
  * @apiGroup            Issue
@@ -150,8 +143,6 @@
  *  } 
  * 
  * 
- * @apiDescription
- * Find a model instance by {{id}} from the data source
  *
  * @apiParam         {ObjectId}   id               사용자 아이디
  * @apiParam         {ObjectId}   fk               문의 아이디

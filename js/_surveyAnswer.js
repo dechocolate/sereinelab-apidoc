@@ -16,8 +16,6 @@
  *    "Authorization": "accessTokenId"
  *  } 
  * 
- * @apiDescription
- * Create a new instance of the model and persist it into the data source
  *
  * @apiParam        {ObjectId}  id          사용자 아이디
  * @apiParam        {ObjectId}  surveyId    설문지 아이디
@@ -40,9 +38,6 @@
  *  {
  *    "Authorization": "accessTokenId"
  *  } 
- * 
- * @apiDescription
- * Creates a new instance in surveyQuestionAnswers of this model
  * 
  * @apiParam        {ObjectId}    id                    사용자 아이디
  * @apiParam        {ObjectId}    surveyAnswerId        설문 답변 아이디
@@ -72,9 +67,6 @@
  *    "Authorization": "accessTokenId"
  *  } 
  * 
- * @apiDescription
- * Queries surveyAnswers of user
- *
  * @apiParam        {ObjectId}      id          사용자 아이디
  * @apiParam        {json}          filter      filter
  * 

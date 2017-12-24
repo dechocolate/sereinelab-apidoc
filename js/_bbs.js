@@ -17,8 +17,6 @@
  *    "Authorization": "accessTokenId"
  *  } 
  * 
- * @apiDescription
- * Find all instances of the model matched by filter from the data 
  * @apiParam    {json}  filter                              filter
  * 
  * @apiSuccess         {ObjectId}   id                                 게시판 아이디
@@ -42,6 +40,11 @@
         "id": 0
     }
 ]
+ *
+ * @apiSuccessExample   {json}      filter 예제
+ * 공지사항 {"where":{"type":0}}
+ * 도움말  {"where":{"type":1}}
+    
  * @apiUse           adminError
  */
 

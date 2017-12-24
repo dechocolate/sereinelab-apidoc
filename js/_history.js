@@ -26,8 +26,6 @@
  * @apiSuccess    {String}      event                           기록 내용
  * @apiSuccess    {Date}        date                            기록 시간 (default: now())
  * 
- * @apiDescription
- * Creates a new instance in histories of this model.
  *
  * 
  * @apiSuccessExample
@@ -89,8 +87,6 @@
  * @apiSuccess    {Date}      	date                            기록 시간
  * @apiSuccess    {String}      event                           기록 내용
  * 
- * @apiDescription
- * Queries histories of user.
  *
  * 
  * @apiSuccessExample
