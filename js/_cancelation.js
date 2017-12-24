@@ -4,10 +4,10 @@
  */
 
 /**
- * @api                 {post}           /users/:id/cancelations/ a.약정 취소
+ * @api                 {post}           /users/:id/cancelations/ c.약정 취소
  * @apiVersion          0.1.0
  * @apiName             cancelation post
- * @apiGroup            Cancelation
+ * @apiGroup            Cancelation/Purchase
  * 
  * @apiPermission       User
  * @apiHeader           (User) {String} authorization Authorization value.
@@ -16,8 +16,6 @@
  *    "Authorization": "accessTokenId"
  *  } 
  * 
- * @apiDescription
- * Find all instances of the model matched by filter from the data 
  * 
  * @apiParam            {ObjectId}  id                                 사용자 아이디 
  * @apiParam            {ObjectId}  contractId                         약정 아이디  
@@ -46,10 +44,10 @@
 
 
 /**
- * @api                 {get}           /users/:id/cancelations/:fk b.약정 위약금 내역 조회
+ * @api                 {get}           /users/:id/cancelations/:fk d.약정 위약금 내역 조회
  * @apiVersion          0.1.0
  * @apiName             cancelation Select
- * @apiGroup            Cancelation
+ * @apiGroup            Cancelation/Purchase
  * 
  * @apiPermission       User
  * @apiHeader           (User) {String} authorization Authorization value.
@@ -58,11 +56,9 @@
  *    "Authorization": "accessTokenId"
  *  } 
  * 
- * @apiDescription
- * Find all instances of the model matched by filter from the data 
  * 
  * 
- * @apiParam            {ObjectId}  id                                  위약금 아이디
+ * @apiParam            {ObjectId}  id                                  사용자 아이디
  * @apiParam            {ObjectId}  fk                                  위약금 아이디
  * @apiParam            {json}      filter                              filter
  * 

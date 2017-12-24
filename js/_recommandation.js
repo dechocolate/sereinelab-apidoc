@@ -43,7 +43,7 @@
 
 
 /**
- * @api                 {get}           /users/:id/recommendation b.캡슐 추천 조회
+ * @api                 {get}           /users/:id/recommendations b.캡슐 추천 조회
  * @apiVersion          0.1.0
  * @apiName             recommendation Select
  * @apiGroup            Recommendation

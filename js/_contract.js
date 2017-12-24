@@ -11,8 +11,6 @@
  * @apiGroup            Contract
  * 
  * 
- * @apiDescription
- * Find all instances of the model matched by filter from the data 
  * @apiParam            {json}    filter                                filter
  * 
  * 
@@ -51,8 +49,6 @@
  *    "Authorization": "accessTokenId"
  *  } 
  * 
- * @apiDescription
- * Queries contracts of user
  * 
  * @apiParam         {ObjectId}   id                                 사용자 아이디
  * 
