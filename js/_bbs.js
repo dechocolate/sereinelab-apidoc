@@ -44,6 +44,8 @@
  * @apiSuccessExample   {json}      filter 예제
  * 공지사항 {"where":{"type":0}}
  * 도움말  {"where":{"type":1}}
+ * 갯수제한 {"limit":1, "skip":1}
+ * {"limit":1, "skip":1, "where":{"type":0}}
     
  * @apiUse           adminError
  */
