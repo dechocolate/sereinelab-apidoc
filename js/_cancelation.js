@@ -4,7 +4,7 @@
  */
 
 /**
- * @api                 {post}           /users/:id/cancelations/ c.약정 취소
+ * @api                 {post}           /users/:id/cancelations/ c.사용자 약정 취소
  * @apiVersion          0.1.0
  * @apiName             cancelation post
  * @apiGroup            Cancelation/Purchase
@@ -44,7 +44,7 @@
 
 
 /**
- * @api                 {get}           /users/:id/cancelations/:fk d.약정 위약금 내역 조회
+ * @api                 {get}           /users/:id/cancelations/:fk d.사용자 약정 위약금 내역 조회
  * @apiVersion          0.1.0
  * @apiName             cancelation Select
  * @apiGroup            Cancelation/Purchase
