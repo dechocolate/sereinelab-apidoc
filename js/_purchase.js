@@ -130,7 +130,7 @@
 
 
 /**
- * @api                 {get}           /users/:id/contract/change f.사용자 약정 변경
+ * @api                 {post}           /users/:id/contract/change f.사용자 약정 변경
  * @apiVersion          0.1.0
  * @apiName             product purchase update
  * @apiGroup            Cancelation/Purchase
@@ -148,7 +148,7 @@
  * @apiSuccessExample
  * HTTP/1.1 200 OK
 	{
-		"message": ""		
+		"count": 5	
 	}
  * 
  *  @apiUse           adminError
