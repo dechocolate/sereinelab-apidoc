@@ -143,7 +143,7 @@
  * @apiParam    {ObjectId}  contractId                      현재 약정 아이디
  * @apiParam    {ObjectId}  contractProductId                변경할 상품아이디
  * 
- * @apiSuccess    {Date}     date                            구매일 (default : now())
+ * @apiSuccess    {Inteager}     count                      변경된 약정 개월 수
  * 
  * @apiSuccessExample
  * HTTP/1.1 200 OK

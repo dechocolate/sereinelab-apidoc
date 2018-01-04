@@ -7,7 +7,7 @@
  * @api                 {get}           /surveys/:id a.설문지 조회 
  * @apiVersion          0.1.0
  * @apiName             survey select
- * @apiGroup            Survey
+ * @apiGroup            Survey/SurveyAnswer
  *
  * 
  *
@@ -54,7 +54,7 @@
             "id": "5a307ed099377e35cc97d65b",
             "surveyId": "5a1eaa6c31da970c3a31d269",
             "max": null,
-            "mix": null
+            "min": null
         },
         {
             "type": 1,
@@ -65,7 +65,7 @@
             "id": "5a307ef499377e35cc97d65c",
             "surveyId": "5a1eaa6c31da970c3a31d269",
             "max": null,
-            "mix": null
+            "min": null
         },
         {
             "type": 2,
@@ -85,7 +85,7 @@
             "id": "5a307f2899377e35cc97d65d",
             "surveyId": "5a1eaa6c31da970c3a31d269",
             "max": null,
-            "mix": null
+            "min": null
         },
         {
             "type": 3,
@@ -96,7 +96,7 @@
             "id": "5a307f4399377e35cc97d65e",
             "surveyId": "5a1eaa6c31da970c3a31d269",
             "max": "10",
-            "mix": "1"
+            "min": "1"
         }
     ]
 }

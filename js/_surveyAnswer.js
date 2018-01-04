@@ -3,10 +3,10 @@
  * @apiError 401Error  AUTHORIZATION_REQUIRED
  */
 /**
- * @api                 {post}           /users/:id/surveyAnswers a.설문 답변
+ * @api                 {post}           /users/:id/surveyAnswers b.설문 답변
  * @apiVersion          0.1.0
  * @apiName             surveyAnswer write
- * @apiGroup            SurveyAnswer
+ * @apiGroup            Survey/SurveyAnswer
  * 
  * 
  * @apiPermission       User
@@ -19,46 +19,38 @@
  *
  * @apiParam        {ObjectId}  id          사용자 아이디
  * @apiParam        {ObjectId}  surveyId    설문지 아이디
+ * @apiParam        {Object}    answers     문항 답변 array
  * 
- * @apiUse           adminError
- */
-
-
-
-/**
- * @api                 {post}           /users/:id/surveyQuestionAnswers b.설문 문항 답변
- * @apiVersion          0.1.0
- * @apiName             surveyQuestionAnswers white
- * @apiGroup            SurveyAnswer
- * 
- * 
- * @apiPermission       User
- * @apiHeader           (User) {String} authorization Authorization value.
- * @apiHeaderExample    {json}          Header-Example:
- *  {
- *    "Authorization": "accessTokenId"
- *  } 
- * 
- * @apiParam        {ObjectId}    id                    사용자 아이디
- * @apiParam        {ObjectId}    surveyAnswerId        설문 답변 아이디
- * @apiParam        {ObjectId}    surveyQuestionId      설문 문항 아이디
- * @apiParam        {String}      value                 설문 문항 답변 값
- *
- * @apiSuccess        {ObjectId}    id                    설문 문항 답변 아이디
- * @apiSuccess        {ObjectId}    userId                사용자 아이디
- * @apiSuccess        {ObjectId}    surveyAnswerId        설문 답변 아이디
- * @apiSuccess        {ObjectId}    surveyQuestionId      설문 문항 아이디
- * @apiSuccess        {String}      value                 설문 문항 답변 값
+ * @apiSuccessExample   {arr}  설문 답변(answers) array 예제
+[
+	{
+		"surveyQuestionId" : "5a307ed099377e35cc97d65b",  //질문 아이디		
+		"value" : 0  //질문 값
+	},
+	{
+		"surveyQuestionId" : "5a307ef499377e35cc97d65c",		
+		"value" : "아 몰랑!"
+	},
+	{
+		"surveyQuestionId" : "5a307f2899377e35cc97d65d",	
+		"value" : 0
+	},
+	{
+		"surveyQuestionId" : "5a307f4399377e35cc97d65e",		
+		"value" : 8
+	}
+]
  * 
  * 
  * @apiUse           adminError
  */
+
 
  /**
- * @api                 {get}           /users/:id/surveyAnswers c.개인 설문지 답변 내용 조회
+ * @api                 {get}           /users/:id/surveyAnswers/:fk c.개인 설문지 답변 내용 조회
  * @apiVersion          0.1.0
  * @apiName             personal surveyAnswer select
- * @apiGroup            SurveyAnswer
+ * @apiGroup            Survey/SurveyAnswer
  * 
  * @apiPermission       User
  * @apiHeader           (User) {String} authorization Authorization value.
@@ -68,42 +60,43 @@
  *  } 
  * 
  * @apiParam        {ObjectId}      id          사용자 아이디
- * @apiParam        {json}          filter      filter
+ * @apiParam        {ObjectId}      fk          설문지 아이디 
  * 
  * 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK
 [
     {
-        "created": "2017-11-29T12:43:02.523Z",
-        "id": "5a1eab566b5c6439b3ed7b37",
-        "surveyId": "5a1eaa6c31da970c3a31d269",
+        "value": "0",
+        "id": "5a4dc9ba687d1f097e3d95dc",
+        "surveyAnswerId": "5a4dc9ba687d1f097e3d95db",
+        "surveyQuestionId": "5a307ed099377e35cc97d65b",
         "userId": "5a1e38fb4d90dd05b086affc",
-        "surveyQuestionAnswers": [
-            {
-                "value": "value",
-                "id": "5a1eabb36b5c6439b3ed7b38",
-                "surveyAnswerId": "5a1eab566b5c6439b3ed7b37",
-                "surveyQuestionId": "",
-                "userId": "5a1e38fb4d90dd05b086affc"
-            }
-        ]
+        "surveyQuestion": {
+            "type": 0,
+            "title": "좋아하는 스포츠는?",
+            "mapping": "스포츠",
+            "display": true,
+            "items": [
+                {
+                    "text": "축구",
+                    "value": "0"
+                },
+                {
+                    "text": "야구",
+                    "value": "1"
+                },
+                {
+                    "text": "농구",
+                    "value": "2"
+                }
+            ],
+            "id": "5a307ed099377e35cc97d65b",
+            "surveyId": "5a1eaa6c31da970c3a31d269",
+            "max": null,
+            "mix": null
+        }
     }
 ]
- * @apiSuccessExample   {json}      Filter-example (상세조회 쿼리)
-    {
-        "include": {
-            "relation": "surveyQuestionAnswers",
-                "scope": {
-                    "include": {
-                    "relation": "surveyQuestion",
-                        "scope": {
-                            "include": "surveyQuestionItems"
-                        }
-                    }
-                }
-            }
-        
-    }
  * @apiUse           adminError
  */
