@@ -51,6 +51,7 @@
  * @apiSuccess         {String}     ttl                               닉네임
  * @apiSuccess         {Date}       created                           회원가입일 (Default : now())
  * @apiSuccess         {ObjectId}   userId                            사용자 아이디
+ * @apiSuccess         {String}     name                              사용자 이름
  * 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK
@@ -58,7 +59,8 @@
         "id": "y9rozqKapMlIphXZUd8Z2jzagaBCVBZaBrs04WCj743eZo9xJRqh9q9MbQMi8puG",
         "ttl": 1209600,
         "created": "2017-11-18T11:30:46.029Z",
-        "userId": 3
+		"userId": 3,
+		"name": "홍길동"
     }
 * @apiSuccessExample include 정보
  include : 사용자 점보 포함

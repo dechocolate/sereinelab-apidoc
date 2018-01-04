@@ -94,7 +94,7 @@
             "id": "5a307ed099377e35cc97d65b",
             "surveyId": "5a1eaa6c31da970c3a31d269",
             "max": null,
-            "mix": null
+            "min": null
         }
     }
 ]
