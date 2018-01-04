@@ -38,7 +38,7 @@
 
 
  /**
- * @api                 {post}           /users/login?include=user b.사용자 로그인
+ * @api                 {post}           /users/login b.사용자 로그인
  * @apiVersion          0.1.0
  * @apiName             user login
  * @apiGroup            User 
@@ -55,14 +55,15 @@
  * 
  * @apiSuccessExample
  *  HTTP/1.1 200 OK
-    {
-        "id": "y9rozqKapMlIphXZUd8Z2jzagaBCVBZaBrs04WCj743eZo9xJRqh9q9MbQMi8puG",
-        "ttl": 1209600,
-        "created": "2017-11-18T11:30:46.029Z",
-		"userId": 3,
-		"name": "홍길동"
-    }
+{
+	"id": "y9rozqKapMlIphXZUd8Z2jzagaBCVBZaBrs04WCj743eZo9xJRqh9q9MbQMi8puG",
+	"ttl": 1209600,
+	"created": "2017-11-18T11:30:46.029Z",
+	"userId": 3,
+	"name": "홍길동"
+}
 * @apiSuccessExample include 정보
+ /users/login?include=user 
  include : 사용자 점보 포함
  * @apiUse           adminError
  */
