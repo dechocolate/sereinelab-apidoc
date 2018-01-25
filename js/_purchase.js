@@ -88,40 +88,50 @@
  * @apiParam    {ObjectId}  id                              사용자 아이디
  * @apiParam    {Json}  filter                              filter
  * 
- * @apiSuccess    {Date}     date                            구매일 (default : now())
- * @apiSuccess    {String}    summary                         구매품 요약
- * @apiSuccess    {Integer}   supply                          총 공급금액
- * @apiSuccess    {Integer}   discount                        총 할인금액
- * @apiSuccess    {Integer}   price                           총 구매금액
- * @apiSuccess    {String}    address                         배송주소
- * @apiSuccess    {Integer}   progress                        주문상태 (준비=0/ 완료=1/ 취소=2)
- * @apiSuccess    {Boolean}   res                             결제상태 (성공=true / 실패=false)  
- * @apiSuccess    {ObjectId}  userId                          사용자 아이디
- * @apiSuccess    {String}    importKey                       3rd lib 결제키 
- * @apiSuccess    {String}    deliveryKey                     배송업체키 
  * @apiSuccess    {ObjectId}  id                              구매 아이디
+ * @apiSuccess    {ObjectId}  userId                          구매 사용자 아이디
+ * @apiSuccess    {Date}      date                            구매일
+ * @apiSuccess    {Number}    price                           상품 원가
+ * @apiSuccess    {Number}    discount                        할인율
+ * @apiSuccess    {Number}    total                           상품 실제 결제 금액
+ * @apiSuccess    {Boolean}   subscription                    정기결제 여부 (true / false) (default:false)
+ * @apiSuccess    {String}    type                            결제수단
+ * @apiSuccess    {String}    address                         배송주소
+ * @apiSuccess    {Number}    progress                        배송 주문 상태 (0=준비 / 1=배송완료 / 2=배송취소)   
+ * @apiSuccess    {Object}    _import                    	  아임포트 결제 정보
+ * @apiSuccess    {Object}    _purchaseItems                  배송 구매 아이템 리스트 (캡슐)
+ * @apiSuccess    {String}    _purchaseItems_name             배송 구매 아이템 캡슐명 (캡슐)
+ * @apiSuccess    {String}    _purchaseItems_code             배송 구매 아이템 캡슐코드 (캡슐)
+ * @apiSuccess    {String}    _purchaseItems_capsuleId        배송 구매 아이템 캡슐 아이디 (캡슐)
+ * @apiSuccess    {String}    _purchaseItems_level	    	  배송 구매 아이템 캡슐 향 세기 (캡슐)
  * 
  * @apiSuccessExample
  * HTTP/1.1 200 OK
-	[
-		{
-			"id": 1,
-			"userId": 1
-		},
-		{
-			"summary": "summary",
-			"supply": 1,
-			"discount": 1,
-			"price": 1,
-			"address": "address",
-			"progress": "1",
-			"res": "",
-			"id": 2,
-			"userId": 1,
-			"importKey": "",
-			"deliveryKey": ""
-		}
-	]
+[
+    {
+        "date": "2018-01-25T04:43:25.518Z",
+        "price": 200,
+		"discount": 50,
+		"total": 100,
+		"subscription": 0,
+		"type": "payment",
+        "name": "76N1 페이스 오일",
+        "address": "서울 강남구 양재대로 339 33",
+        "progress": 0,
+        "id": "5a69606da62ccf13ed86c5df",
+        "userId": "5a1e38fb4d90dd05b086affc",
+        "_purchaseItems": [
+            {
+                "id": 0,
+                "name": "일랑일랑 5ml",
+                "code": "aroma3",
+                "userId": "5a1e38fb4d90dd05b086affc",
+                "capsuleId": "5a680c20a2525b07b50b91a4"
+            }
+        ],        
+        "_import": {}        
+    }
+]
  * 
  *  @apiUse           adminError
 */

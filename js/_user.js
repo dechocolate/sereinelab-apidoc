@@ -88,10 +88,48 @@
  */
 
 
- /**
- * @api                 {get}           /users/:id d.사용자 프로필 조회
+  /**
+ * @api                 {get}           /users/me d.사용자 프로필 조회
  * @apiVersion          0.1.0
  * @apiName             user profile select
+ * @apiGroup            User
+ * 
+ * @apiPermission       User
+ * @apiHeader           (User) {String} authorization Authorization value.
+ * @apiHeaderExample    {json}          Header-Example:
+ *  {
+ *    "Authorization": "accessTokenId"
+ *  } 
+ * 
+ * @apiSuccess         {ObjectId}   id                             사용자 고유 아이디
+ * @apiSuccess         {String}     email                          이메일
+ * @apiSuccess         {Integer}    provider                       가입경로
+ * @apiSuccess         {String}     name                           닉네임
+ * @apiSuccess         {String}     gender                         성별
+ * @apiSuccess         {Date}       birth                          생년월일
+ * @apiSuccess         {String}     zipcode                        우편번호
+ * @apiSuccess         {String}     address1                       주소
+ * @apiSuccess         {String}     address2                       주소상세 
+ * @apiSuccess         {String}     phone                          휴대폰번호
+ * @apiSuccess         {Boolean}    emailVerified                  이메일인증여부 (Default : false)
+ * @apiSuccess         {Interger}   progress                       진행사항 (기기 = 0/ DNA = 1/  캡술 = 2)
+ * @apiSuccess         {Date}       purchase                       기기 구매일
+ * @apiSuccess         {Boolean}    available                      사용여부 ( Default : true)
+ * @apiSuccess         {Date}       created                        회원가입일 (생성일)
+ * @apiSuccess         {Date}       deleted                        삭제일 (삭제일)
+ * @apiSuccess         {Boolean}    leave                          사용자 탈퇴 신청 여부 
+ * @apiSuccess         {Date}       lastLogin                      마지막 로그인 시간
+ * @apiSuccess         {Object}     image                          프로필 사진
+ * @apiSuccess         {Object}     contract                       활성화 되어 있는 최신 약정
+
+ * @apiUse           adminError
+ */
+
+
+ /**
+ * @api                 {get}           /users/:id d.사용자 프로필 조회 필터
+ * @apiVersion          0.1.0
+ * @apiName             user profile select filter
  * @apiGroup            User
  * 
  * @apiPermission       User
@@ -105,7 +143,7 @@
  * @apiParam            {ObjectId}      id                              사용자 아이디
  * @apiParam            {json}          filter                          filter
  * 
- * @apiSuccess         {ObjectId}   id                             사용자 아이디
+ * @apiSuccess         {ObjectId}   id                             사용자 고유 아이디
  * @apiSuccess         {String}     email                          이메일
  * @apiSuccess         {Integer}    provider                       가입경로
  * @apiSuccess         {String}     name                           닉네임
